@@ -5,11 +5,13 @@ public class Matriser {
 	// a)
 	public static void skrivUt(int[][] matrise) {
 		// Går gjennom matrise og skriver ut hvert tall.
-		for (int i = 0; i < matrise.length; i++) {
-			for (int j = 0; j < matrise[0].length; j++) {
-				System.out.println(matrise[i][j]);
-			}
-		}
+		/*
+		 * for (int i = 0; i < matrise.length; i++) { for (int j = 0; j <
+		 * matrise[0].length; j++) { System.out.print(matrise[i][j] + " "); }
+		 * System.out.println(); }
+		 */
+
+		System.out.println(tilStreng(matrise));
 	}
 
 	// b)
@@ -81,8 +83,7 @@ public class Matriser {
 		if (a[0].length == b.length) {
 			// Lager ny matrise med dimmensjonene fra a og b
 			int[][] produkt = new int[a.length][b[0].length];
-			// Ganger sammen matriser, ved hjelp av en algoritme jeg fant på, for så å
-			// glemme hvordan funker.
+			// Multipliserer matriser
 			for (int i = 0; i < a.length; i++) {
 				for (int j = 0; j < b[0].length; j++) {
 					for (int k = 0; k < a[0].length; k++) {
