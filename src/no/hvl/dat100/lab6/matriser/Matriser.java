@@ -5,13 +5,26 @@ public class Matriser {
 	// a)
 	public static void skrivUt(int[][] matrise) {
 		// Går gjennom matrise og skriver ut hvert tall.
-		/*
-		 * for (int i = 0; i < matrise.length; i++) { for (int j = 0; j <
-		 * matrise[0].length; j++) { System.out.print(matrise[i][j] + " "); }
-		 * System.out.println(); }
-		 */
+		System.out.println("{");
+		for (int i = 0; i < matrise.length; i++) {
+			System.out.print("{");
+			for (int j = 0; j < matrise[0].length; j++) {
+				if (j < matrise[0].length - 1) {
+					System.out.print(matrise[i][j] + ", ");
+				} else {
+					System.out.print(matrise[i][j]);
+				}
+			}
+			if (i < matrise.length - 1) {
+				System.out.print("},");
+			} else {
+				System.out.print("}");
+			}
+			System.out.println();
+		}
+		System.out.println("}");
+		System.out.println();
 
-		System.out.println(tilStreng(matrise));
 	}
 
 	// b)
